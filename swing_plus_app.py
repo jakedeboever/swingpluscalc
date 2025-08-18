@@ -206,49 +206,54 @@ def main():
             'vertical_swing_path': 17.5
         }
     
-    # Input sliders
-    avg_swing_speed = st.sidebar.slider(
+    # Input fields with validation
+    avg_swing_speed = st.sidebar.number_input(
         "Average Swing Speed (mph)",
         min_value=float(ranges['avg_swing_speed'][0]),
         max_value=float(ranges['avg_swing_speed'][1]),
         value=float(defaults['avg_swing_speed']),
         step=0.1,
+        format="%.1f",
         help="The average speed of your swing"
     )
     
-    avg_swing_length = st.sidebar.slider(
+    avg_swing_length = st.sidebar.number_input(
         "Average Swing Length (ft)",
         min_value=float(ranges['avg_swing_length'][0]),
         max_value=float(ranges['avg_swing_length'][1]),
         value=float(defaults['avg_swing_length']),
         step=0.1,
+        format="%.1f",
         help="The average length/distance of your swing path"
     )
     
-    attack_angle = st.sidebar.slider(
+    attack_angle = st.sidebar.number_input(
         "Attack Angle (degrees)",
         min_value=float(ranges['attack_angle'][0]),
         max_value=float(ranges['attack_angle'][1]),
         value=float(defaults['attack_angle']),
         step=0.1,
+        format="%.1f",
         help="The angle of attack at contact (positive = uppercut)"
     )
     
-    attack_direction = st.sidebar.slider(
+    attack_direction = st.sidebar.number_input(
         "Attack Direction (degrees)",
         min_value=float(ranges['attack_direction'][0]),
         max_value=float(ranges['attack_direction'][1]),
         value=float(defaults['attack_direction']),
         step=0.1,
+        format="%.1f",
         help="The horizontal direction of attack"
     )
     
-    vertical_swing_path = st.sidebar.slider(
+    vertical_swing_path = st.sidebar.number_input(
         "Vertical Swing Path (degrees)",
         min_value=float(ranges['vertical_swing_path'][0]),
         max_value=float(ranges['vertical_swing_path'][1]),
         value=float(defaults['vertical_swing_path']),
         step=0.1,
+        format="%.1f",
         help="The vertical component of your swing path"
     )
     
